@@ -1,0 +1,357 @@
+{% extends 'base.html' %}
+{% block title %}
+вісімнадцятий урок
+{% endblock %}
+{% block body %}
+<div class="wrapper">
+    <header class="header"></header>
+<main class="main">
+    <div class="dishes">
+        <div class="dishes__container">
+            <div class="dishes__header header-construction">
+                <div class="header-construction__title">Dishes</div>
+                <div class="header-construction__subtitle">Dish Of The Day</div>
+            </div>
+            <div class="dishes__row">
+                {% for meal in meals %}
+                <div class="dishes__item item-dishes">
+                    <div class="item-dishes__block">
+                    <div class="item-dishes__image _ibg">
+                        <a href="" class="item-dishes__picture-link">
+                        <img src="{{ url_for('static', filename='uploads/') }}{{ meal.image }}" alt="dish">
+                    </a>
+                    </div>
+                    <div class="item-dishes__body">
+                        <div class="item-dishes__title">{{ meal.title }}</div>
+                        <div class="item-dishes__subtitle">{{ meal.subtitle }}</div>
+                        <div class="item-dishes__text">{{ meal.text }}</div>
+                        <div class="item-dishes__bottom">
+                            <div class="item-dishes__left">
+                                <div class="item-dishes__items">
+                                <div class="item-dishes__stars">
+                                    <input id="item-dishes5" name="item-dishes"  value="5" type="radio" class="item-dishes__input">
+                                    <label for="item-dishes5" class="item-dishes__label"></label>
+                                    <input id="item-dishes4" name="item-dishes"  value="4" type="radio" class="item-dishes__input">
+                                    <label for="item-dishes4" class="item-dishes__label"></label>
+                                    <input id="item-dishes3" name="item-dishes" value="3" type="radio" class="item-dishes__input">
+                                    <label for="item-dishes3" class="item-dishes__label"></label>
+                                    <input id="item-dishes2" name="item-dishes"  value="2" type="radio" class="item-dishes__input">
+                                    <label for="item-dishes2" class="item-dishes__label"></label>
+                                    <input id="item-dishes1" name="item-dishes"  value="1" type="radio" class="item-dishes__input">
+                                    <label for="item-dishes1" class="item-dishes__label"></label>
+                                </div>
+                            </div>
+                            <div class="item-dishes__number">12</div>
+                            </div>
+                            <div class="item-dishes__right">
+                                <div class="item-dishes__btn">
+                                    <a href="" class="item-dishes__link">Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="works">
+        <div class="works__container">
+            <div class="dishes__header header-construction">
+                <div class="header-construction__title">Work</div>
+                <div class="header-construction__subtitle">How it Works</div>
+            </div>
+            <div class="works__row">
+                <div class="works__item item-works">
+                    <div class="item-works__body">
+                        <div class="item-works__title">Pick meals</div>
+                        <div class="item-works__text">Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie options.</div>
+                    </div>
+                </div>
+                <div class="works__item item-works">
+                    <div class="item-works__body">
+                        <div class="item-works__title">Pick meals</div>
+                        <div class="item-works__text">Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie options.</div>
+                    </div>
+                </div>
+                <div class="works__item item-works">
+                    <div class="item-works__body">
+                        <div class="item-works__title">Pick meals</div>
+                        <div class="item-works__text">Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie options.</div>
+                    </div>
+                </div>
+                <div class="works__item item-works">
+                    <div class="item-works__body">
+                        <div class="item-works__title">Pick meals</div>
+                        <div class="item-works__text">Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie options.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="frontpage">
+        <div class="frontpage__container">
+            <div class="frontpage__header">
+                <div class="frontpage__left">
+                    <div class="frontpage__switcher">
+                        <input id="switcher" name="switcher" type="checkbox" class="frontpage__input">
+                        <label for="switcher" class="frontpage__label"></label>
+                    </div>
+                <div class="frontpage__headtext">Healthy switcher</div>
+                </div>
+                <div class="frontpage__menu">
+                    <a href="" class="frontpage__link">Menu</a>
+                    <a href="" class="frontpage__link">Recipes</a>
+                    <a href="" class="frontpage__link">Chefs</a>
+                    <a href="" class="frontpage__link">Contacts</a>
+                </div>
+            </div>
+            <div class="frontpage__body">
+                <div class="frontpage__title">Your  <span>favourite food</span> <br>
+                    Delivered <span>hot & fresh</span></div>
+                    <div class="frontpage__subtitle">HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes.</div>
+                    <div class="frontpage__button">
+                        <a href="" class="frontpage__link-second">Order Now</a>
+                    </div>
+            </div>
+            <div class="frontpage__footer">
+                <div class="frontpage__item item-frontpage">
+                    <div class="item-frontpage__body">
+                        <div class="item-frontpage__image">
+                            <img src="img/frontpage/ic_watch_later.svg" alt="later">
+                        </div>
+                        <div class="item-frontpage__title">Today 10:00 am - 7:00 pm</div>
+                        <div class="item-frontpage__text">Working hours</div>
+                        </div>
+                </div>
+                <div class="frontpage__item item-frontpage">
+                    <div class="item-frontpage__body">
+                        <div class="item-frontpage__image">
+                            <img src="img/frontpage/ic_watch_later.svg" alt="later">
+                        </div>
+                        <div class="item-frontpage__title">Today 10:00 am - 7:00 pm</div>
+                        <div class="item-frontpage__text">Working hours</div>
+                    </div>
+                </div>
+                <div class="frontpage__item item-frontpage">
+                    <div class="item-frontpage__body">
+                        <div class="item-frontpage__image">
+                            <img src="img/frontpage/ic_watch_later.svg" alt="later">
+                        </div>
+                        <div class="item-frontpage__title">Today 10:00 am - 7:00 pm</div>
+                        <div class="item-frontpage__text">Working hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="recipes">
+        <div class="recipes__container">
+            <div class="recipes__row">
+                <div class="recipes__column_big big-column">
+                        <div class="big-column__body">
+                            <div class="big-column__title">breakfast</div>
+                            <div class="big-column__subtitle">05 Jul 2016</div>
+                            <div class="big-column__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                            <div class="big-column__subtext">Jason Keller</div>
+                            <div class="big-column__images">
+                                <div class="big-column__small-first">
+                                <img src="img/recipes/icons/ic_remove_red_eye.svg" alt="watch">
+                                <span> 275 </span>
+                                </div>
+                                <div class="big-column__small-second">
+                                    <img src="img/recipes/icons/ic_question_answer.svg" alt="watch">
+                                    <span> 12 </span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="recipes__column_big small-column">
+                    <div class="small-column__item item-small">
+                        <div class="item-small__background">
+                        <div class="item-small__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </div>
+                        <div class="item-small__footer">
+                            <div class="item-small__left">
+                            <div class="item-small__patern">lunch</div>
+                            <div class="item-small__subpatern">07 Jan 2016</div>
+                            </div>
+                            <div class="item-small__right">
+                            <div class="item-small__images">
+                                <div class="item-small__small-first">
+                                <img src="img/recipes/icons/ic_remove_red_eye.svg" alt="watch">
+                                <span> 275 </span>
+                            </div>
+                            <div class="item-small__small-second">
+                                <img src="img/recipes/icons/ic_question_answer.svg" alt="watch">
+                                <span> 12 </span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="small-column__item item-small item-small_pict">
+                        <div class="item-small__background item-small__background_clean ">
+                        <div class="item-small__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</div>
+                        <div class="item-small__footer">
+                            <div class="item-small__left">
+                            <div class="item-small__patern">lunch</div>
+                            <div class="item-small__subpatern">07 Jan 2016</div>
+                            </div>
+                            <div class="item-small__right">
+                            <div class="item-small__images">
+                                <div class="item-small__small-first">
+                                <img src="img/recipes/icons/ic_remove_red_eye.svg" alt="watch">
+                                <span> 275 </span>
+                            </div>
+                            <div class="item-small__small-second">
+                                <img src="img/recipes/icons/ic_question_answer.svg" alt="watch">
+                                <span> 12 </span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="small-column__item item-small">
+                        <div class="item-small__background">
+                        <div class="item-small__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</div>
+                        <div class="item-small__footer">
+                            <div class="item-small__left">
+                            <div class="item-small__patern">lunch</div>
+                            <div class="item-small__subpatern">07 Jan 2016</div>
+                            </div>
+                            <div class="item-small__right">
+                            <div class="item-small__images">
+                                <div class="item-small__small-first">
+                                <img src="img/recipes/icons/ic_remove_red_eye.svg" alt="watch">
+                                <span> 275 </span>
+                            </div>
+                            <div class="item-small__small-second">
+                                <img src="img/recipes/icons/ic_question_answer.svg" alt="watch">
+                                <span> 12 </span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</main>
+<footer class="footer"></footer>
+</div>
+<!-- <form  class="forma" action="#">
+    <input class="clown" placeholder="Введите имя" name="username"  type="text">
+    <input autocomplete="off" placeholder="Введите возраст" name="age"  type="number">
+    <input placeholder="Введите телефон" name="phonenumber"  type="tel">
+    <input placeholder="Ведите пароль" name="pass"  type="password">
+</form>-->
+<!--  <svg  class="test1" width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M29.5 42C37.4967 42 44 35.721 44 28C44 20.279 37.4967 14 29.5 14C21.5032 14 15 20.279 15 28C15 35.721 21.5032 42 29.5 42ZM29.5 21C33.4984 21 36.75 24.1395 36.75 28C36.75 31.8605 33.4984 35 29.5 35C25.5016 35 22.25 31.8605 22.25 28C22.25 24.1395 25.5016 21 29.5 21Z" fill="#0D5C63"/>
+    <path d="M27.4338 70.3403C28.0367 70.7693 28.7591 71 29.5 71C30.2409 71 30.9633 70.7693 31.5662 70.3403C32.6492 69.577 58.103 51.2624 57.9997 28.4002C57.9997 12.7411 45.214 0 29.5 0C13.786 0 1.00031 12.7411 1.00031 28.3825C0.897002 51.2624 26.3508 69.577 27.4338 70.3403ZM29.5 7.10006C41.2882 7.10006 50.8748 16.6532 50.8748 28.418C50.9496 44.173 35.2427 58.3199 29.5 62.9598C23.7609 58.3163 8.05042 44.1659 8.12524 28.4002C8.12524 16.6532 17.7118 7.10006 29.5 7.10006Z" fill="#0D5C63"/>
+    </svg>
+<svg  class="test2" width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M29.5 42C37.4967 42 44 35.721 44 28C44 20.279 37.4967 14 29.5 14C21.5032 14 15 20.279 15 28C15 35.721 21.5032 42 29.5 42ZM29.5 21C33.4984 21 36.75 24.1395 36.75 28C36.75 31.8605 33.4984 35 29.5 35C25.5016 35 22.25 31.8605 22.25 28C22.25 24.1395 25.5016 21 29.5 21Z" fill="#0D5C63"/>
+    <path d="M27.4338 70.3403C28.0367 70.7693 28.7591 71 29.5 71C30.2409 71 30.9633 70.7693 31.5662 70.3403C32.6492 69.577 58.103 51.2624 57.9997 28.4002C57.9997 12.7411 45.214 0 29.5 0C13.786 0 1.00031 12.7411 1.00031 28.3825C0.897002 51.2624 26.3508 69.577 27.4338 70.3403ZM29.5 7.10006C41.2882 7.10006 50.8748 16.6532 50.8748 28.418C50.9496 44.173 35.2427 58.3199 29.5 62.9598C23.7609 58.3163 8.05042 44.1659 8.12524 28.4002C8.12524 16.6532 17.7118 7.10006 29.5 7.10006Z" fill="#0D5C63"/>
+    </svg>
+<svg  class="test3" width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M29.5 42C37.4967 42 44 35.721 44 28C44 20.279 37.4967 14 29.5 14C21.5032 14 15 20.279 15 28C15 35.721 21.5032 42 29.5 42ZM29.5 21C33.4984 21 36.75 24.1395 36.75 28C36.75 31.8605 33.4984 35 29.5 35C25.5016 35 22.25 31.8605 22.25 28C22.25 24.1395 25.5016 21 29.5 21Z" fill="#0D5C63"/>
+    <path d="M27.4338 70.3403C28.0367 70.7693 28.7591 71 29.5 71C30.2409 71 30.9633 70.7693 31.5662 70.3403C32.6492 69.577 58.103 51.2624 57.9997 28.4002C57.9997 12.7411 45.214 0 29.5 0C13.786 0 1.00031 12.7411 1.00031 28.3825C0.897002 51.2624 26.3508 69.577 27.4338 70.3403ZM29.5 7.10006C41.2882 7.10006 50.8748 16.6532 50.8748 28.418C50.9496 44.173 35.2427 58.3199 29.5 62.9598C23.7609 58.3163 8.05042 44.1659 8.12524 28.4002C8.12524 16.6532 17.7118 7.10006 29.5 7.10006Z" fill="#0D5C63"/>
+    </svg> -->
+        
+        
+<!--<div class="our-impact _container-1440">
+        <div class="our-impact__block">
+        <div class="our-impact__header">
+            <div class="our-impact__heading heading-pattern">
+            <div class="heading-pattern__title">OUR IMPACT</div>
+            <div class="heading-pattern__subtitle">Nemo enim ipsam voluptatem quia voluptas</div>
+        </div>
+            <div class="our-impact__image">
+                <img src="img/doggyother/Image.jpg" alt="">
+            </div>
+        </div>
+        <div class="our-impact__items">
+            <div class="item">
+                <div class="item__image">
+                    <img src="img/doggysvg/dog_duckling_24x.svg" alt="duckling">
+                </div>
+                <div class="item__body">
+                    <div class="item__text">3,700</div>
+                    <div class="item__subtext">puppy baths</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__image">
+                    <img src="img/doggysvg/dog_house_24px.svg" alt="dog_house">
+                </div>
+                <div class="item__body">
+                    <div class="item__text">4,500</div>
+                    <div class="item__subtext">dogs boarded</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__image">
+                    <img src="img/doggysvg/dog_leash_24x.svg" alt="dog_leash">
+                </div>
+                <div class="item__body">
+                    <div class="item__text">2,900</div>
+                    <div class="item__subtext">pups trained</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__image">
+                    <img src="img/doggysvg/dog_food_bowl_24x.svg" alt="dog_food_bowl">
+                </div>
+                <div class="item__body">
+                    <div class="item__text">12k+</div>
+                    <div class="item__subtext">meals served</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="promise _container-1040">
+    <div class="promise__header">
+        <div class="promise__title">OUR PROMISE TO YOU</div>
+        <div class="promise__text">Sed perspiciatis omnis iste natus</div>
+    </div>
+    <div class="promise__items">
+        <div class="promise__item item-promise">
+            <div class="item-promise__image">
+                <img src="img/promisesvg/dog_love_24x.svg" alt="doglove">
+            </div>
+            <div class="item-promise__body">
+            <div class="item-promise__headline">24/7 Love & Care</div>  
+            <div class="item-promise__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</div>
+            </div>
+
+
+        </div>
+        <div class="promise__item item-promise">
+            <div class="item-promise__image">
+                <img src="img/promisesvg/dog_vet_24x.svg" alt="doglove">
+            </div>
+            <div class="item-promise__body">
+            <div class="item-promise__headline">On-site Veterinarian</div>  
+            <div class="item-promise__text">Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</div>
+            </div>
+        </div>
+        <div class="promise__item item-promise">
+            <div class="item-promise__image">
+                <img src="img/promisesvg/dog_stream_24x.svg" alt="doglove">
+            </div>
+            <div class="item-promise__body">
+            <div class="item-promise__headline">Live-stream Cameras</div>  
+            <div class="item-promise__text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur illum.</div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+{% endblock %}

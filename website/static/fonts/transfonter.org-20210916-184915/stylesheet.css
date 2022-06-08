@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Rutenia';
+    src: url('Rutenia-Regular.woff2') format('woff2'),
+        url('Rutenia-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
